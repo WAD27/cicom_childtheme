@@ -1,14 +1,14 @@
   <nav class="navbar navbar-wrap navbar-custom navbar-fixed-top menu-wrap">
     <div class="container full">
         <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="col-lg-2 col-md-1 col-sm-6 col-xs-6">
               <div class="logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><img src="<?php echo esc_url(get_theme_mod('universal_logo_upload', get_template_directory_uri() . '/assets/images/logo.png')); ?>" data-rjs="<?php echo esc_url(get_theme_mod('universal_retina_logo_upload',get_template_directory_uri() . '/assets/images/logo@2x.png')); ?>" class="logowhite" alt="<?php bloginfo( 'name' ) ?>" />
                   <img src="<?php echo esc_url(get_theme_mod('universal_logo_dark_upload', get_template_directory_uri() . '/assets/images/logo-dark.png')); ?>" data-rjs="<?php echo esc_url(get_theme_mod('universal_retina_logo_dark_upload',get_template_directory_uri() . '/assets/images/logo-dark@2x.png')); ?>" class="logodark" alt="<?php bloginfo( 'name' ) ?>" />
                 </a>
               </div>
           </div>
-          <div class="col-lg-10 col-md-8 col-sm-6 col-xs-6 pull-right">
+          <div class="col-lg-10 col-md-11 col-sm-6 col-xs-6 pull-right">
           <?php if(get_theme_mod('universal_menu_select', 'standard') == 'standard')  { ?>
             <div class="menu-center">
               <div class="menu-responsive desktop">

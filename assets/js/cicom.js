@@ -1,5 +1,7 @@
 jQuery(document).ready(function() {
 
-    jQuery('.blog-read-more a').html("Leer más")
+  alert("Test CICOM")
+  console.log("Test CICOM");
+  jQuery('.blog-read-more a').html("Leer más")
 
 })

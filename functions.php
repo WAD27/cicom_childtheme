@@ -7,3 +7,4 @@
 }
 add_action( 'wp_enqueue_scripts', 'cicom_scripts' );
 
+// Custom post

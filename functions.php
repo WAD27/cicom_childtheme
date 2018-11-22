@@ -4,12 +4,27 @@
    $parent_style = 'parent-style';
   wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'custom-child', get_stylesheet_directory_uri() . '/assets/css/cicom.css', array($parent_style), '1.0.0' );
-  wp_enqueue_script('img-script',get_stylesheet_directory_uri() . '/assets/js/cicomimgLiquid-min.js', array( 'jquery' ));
+  wp_enqueue_script('img-script',get_stylesheet_directory_uri() . '/assets/js/imgLiquid-min.js', array( 'jquery' ));
   wp_enqueue_script('custom-script',get_stylesheet_directory_uri() . '/assets/js/cicom.js', array( 'jquery' ));
 }
 add_action( 'wp_enqueue_scripts', 'cicom_scripts' );
 
 // Custom posts
+// crea taxonomia especifica
+function banner_tax() {
+    register_taxonomy(
+        'banner-category',
+        'cicom-banners',
+        array(
+            'label' => __( 'Categoría Banner' ),
+            'rewrite' => array( 'slug' => 'banner-category' ),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action( 'init', 'banner_tax' );
+
+
 function cicom_banners() {
   // etiquetas backend
   $labels = array(
@@ -34,8 +49,8 @@ function cicom_banners() {
     'label'               => __( 'CICOM Banners', 'cicom-theme' ),
     'description'         => __( 'Banners para CICOM', 'cicom-theme' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', ),
-    // 'taxonomies'          => array( '' ),
+    // 'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'custom-fields', ),
+    'supports'            => array('title', 'custom-fields'),
     'menu_icon'           => 'dashicons-controls-play',
     'hierarchical'        => false,
     'public'              => true,
@@ -49,6 +64,7 @@ function cicom_banners() {
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type'     => 'page',
+    'taxonomies'          => array('banner-category'),
   );
 
   // Registra

@@ -2,8 +2,18 @@
   outline: 1px solid lime;
 }
 /* override */
+.imgLiquid img {
+    /* visibility: visible !important; */
+}
 div {
   height: 100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+a {
+  display:inline;
 }
 /* menu */
 .navbar-wrap {
@@ -14,7 +24,12 @@ div {
 }
 
 /* banners */
-
+#banner-grid {
+  padding: 0;
+}
 .banner {
-  height: 150px;
+  height: 175px;
+}
+.banner img {
+  /* height: 100%; */
 }

@@ -27,43 +27,38 @@ get_header();
 
         <?php endwhile;?>
 
-        <div id="banners" class="col">
+        <div id="banners" class="container-fluid">
 
           <?php
-          $banners = array('nombre'=>'url');
-
           $banner = new WP_Query(
             array('post_type'=>'cicom-banners')//pagina 'bienvenida inicio'
           );
           ?>
 
-          <ul id="banner-grid" class="col">
+          <ul id="banner-grid" class="row">
 
             <?php
-            while ($hero->have_posts()):
-              $hero->the_post();
+            $args = array('post_type' => 'cicom-banners' );
+            // $args = array('category_name' => 'banner-primera-fila' );
+            $cpt = new WP_Query($args);
+            while ($cpt->have_posts()):
+              $cpt->the_post();
               ?>
-
               <!-- banners -->
               <?php
-              $ban = array(
-                '/assets/img/placeholder.png',
-                '/assets/img/placeholder.png',
-                '/assets/img/placeholder.png',
-                'assets/img/placeholder.png'
-              );
-              for ($i=0; $i < count($ban) ; $i++):
+              for ($i=0; $i < 4 ; $i++):
                 ?>
                 <li class="banner col col-md-6 col-lg-3 text-center">
-                  <a href="#" target="_blank">
-                    <div class="col imgLiquid imgLiquidNoFill">
-                      <img src="<?php echo $ban[$i];?>" alt="Banner CICOM">
+                  <a class="col" href="<?php echo the_field('link_del_banner'); ?>" target="_blank">
+                    <div class="row imgLiquid imgLiquidNoFill">
+                      <img src="<?php echo the_field('imagen_banner');?>" alt="Banner CICOM">
                     </div>
                   </a>
                 </li>
 
                 <?php
               endfor;
+
             endwhile;
             ?>
           </ul>

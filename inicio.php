@@ -20,8 +20,8 @@ get_header();
         while ($hero->have_posts()):
           $hero->the_post();
           ?>
-          <!-- banners -->
-          <div id="" class="col">
+          <!-- heroscreen -->
+          <div id="heroscreen_container" class="col">
             <?php echo the_content(); ?>
           </div>
 
@@ -29,36 +29,25 @@ get_header();
 
         <div id="banners" class="container-fluid">
 
-          <?php
-          $banner = new WP_Query(
-            array('post_type'=>'cicom-banners')//pagina 'bienvenida inicio'
-          );
-          ?>
-
           <ul id="banner-grid" class="row">
-
+            <!-- banners -->
             <?php
-            $args = array('post_type' => 'cicom-banners' );
-            // $args = array('category_name' => 'banner-primera-fila' );
+            $args = array(
+              'posts_per_page' => '4',
+              'post_type' => 'cicom-banners-top'
+             );
             $cpt = new WP_Query($args);
             while ($cpt->have_posts()):
               $cpt->the_post();
               ?>
-              <!-- banners -->
-              <?php
-              for ($i=0; $i < 4 ; $i++):
-                ?>
-                <li class="banner col col-md-6 col-lg-3 text-center">
+                <li class="banner col col-sm-6 col-md-3 text-center">
                   <a class="col" href="<?php echo the_field('link_del_banner'); ?>" target="_blank">
                     <div class="row imgLiquid imgLiquidNoFill">
                       <img src="<?php echo the_field('imagen_banner');?>" alt="Banner CICOM">
                     </div>
                   </a>
                 </li>
-
                 <?php
-              endfor;
-
             endwhile;
             ?>
           </ul>

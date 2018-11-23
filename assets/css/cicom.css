@@ -1,10 +1,9 @@
+/* wireframe */
 * {
   outline: 1px solid lime;
 }
-/* override */
-.imgLiquid img {
-    /* visibility: visible !important; */
-}
+/*  */
+/* overrides */
 div {
   height: 100%;
 }
@@ -13,7 +12,7 @@ ul {
   margin: 0;
 }
 a {
-  display:inline;
+  display: inline;
 }
 /* menu */
 .navbar-wrap {
@@ -22,14 +21,10 @@ a {
 .menu-transparent .navbar.top-nav-collapse {
     background: #fff !important;
 }
-
 /* banners */
 #banner-grid {
   padding: 0;
 }
 .banner {
-  height: 175px;
-}
-.banner img {
-  /* height: 100%; */
+  height: 180px;
 }

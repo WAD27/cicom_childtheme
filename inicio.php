@@ -29,6 +29,8 @@ get_header();
 
         <div id="banners" class="container-fluid">
 
+          <h1 class="col-12 text-center">CICOM se integra por:</h1>
+
           <ul id="banner-grid" class="row">
             <!-- banners -->
             <?php
@@ -60,7 +62,7 @@ get_header();
       <div class="col-lg-12 col-md-12 col-sm-12 no-sidebar">
         <?php
 
-        get_template_part( 'framework/content/page');            echo "DEBUUUGGGG";
+        get_template_part( 'framework/content/page');
 
         ?>
       </div>
@@ -68,6 +70,6 @@ get_header();
   </div>
 </section>
 
-<?php the_posts_pagination( array('prev_text' => __('&laquo;'), 'next_text'    => __('&raquo;'))) ?>
+<?php //the_posts_pagination( array('prev_text' => __('&laquo;'), 'next_text'    => __('&raquo;'))) ?>
 
 <?php get_footer(); ?>

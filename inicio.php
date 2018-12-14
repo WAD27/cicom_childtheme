@@ -26,37 +26,42 @@ get_header();
           </div>
 
         <?php endwhile;?>
+        <!-- menu asociados -->
+        <div id="hero-menu" class="container-fluid">
+          <br>
+          <h3 class="col-12 text-center">CICOM se integra por:</h3>
 
-        <div id="banners" class="container-fluid">
+          <ul id="hero-menu-grid" class="row">
 
-          <h1 class="col-12 text-center">CICOM se integra por:</h1>
-
-          <ul id="banner-grid" class="row">
-            <!-- banners -->
             <?php
-            $args = array(
-              'posts_per_page' => '4',
-              'post_type' => 'cicom-banners-top'
-             );
-            $cpt = new WP_Query($args);
-            while ($cpt->have_posts()):
-              $cpt->the_post();
+            $socios = array('Asociaciónes','Medios','Academia','Anunciantes');
+            $iconos = array('users','play','graduation-cap','microphone');
+            $colores = array('--color-gray-1','--color-gray-2','--color-gray-3','--color-gray-4');
+            $links = array('#','#','#','#');
+            for ($i=0; $i < 4; $i++):
               ?>
-                <li class="banner col col-sm-6 col-md-3 text-center">
-                  <a class="col" href="<?php echo the_field('link_del_banner'); ?>" target="_blank">
-                    <div class="row imgLiquid imgLiquidNoFill">
-                      <img src="<?php echo the_field('imagen_banner');?>" alt="Banner CICOM">
+              <li class="hero-menu-item col-12 col-sm-6 col-md-3 text-center" style="background-color: var(<?php echo$colores[$i]?>);">
+                <a class="col-12" href="<?php echo $links[$i]; ?>" target="_blank">
+                  <div class="hero-menu-item-txt col-12 ha">
+                    <div class="col-12">
+                      <i class="fa fa-<?php echo $iconos[$i];?>"></i>
                     </div>
-                  </a>
-                </li>
-                <?php
-            endwhile;
+                    <div class="col-12">
+                      <?php echo $socios[$i]; ?>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <?php
+            endfor;
             ?>
           </ul>
 
         </div>
 
       </div>
+      <br>
+      <hr>
       <!-- fin custom -->
 
       <div class="col-lg-12 col-md-12 col-sm-12 no-sidebar">
@@ -72,4 +77,4 @@ get_header();
 
 <?php //the_posts_pagination( array('prev_text' => __('&laquo;'), 'next_text'    => __('&raquo;'))) ?>
 
-<?php get_footer(); ?>
+<?php get_footer('inicio'); ?>

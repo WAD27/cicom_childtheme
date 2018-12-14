@@ -5,12 +5,17 @@
 --color-1: #F26425;
 --color-2: #FAA51A;
 --color-3: #FFF200;
+--color-gray-1: #C0C0C0;
+--color-gray-2: #A9A9A9;
+--color-gray-3: #808080;
+--color-gray-4: #696969;
 --color-dark: #444444;
 --color-clear: whitesmoke;
+--border-radius: 5px;
 }
 /* wireframe */
 * {
-  outline: 1px solid lime;
+  /* outline: 1px solid lime; */
 }
 /*  */
 /* overrides */
@@ -22,14 +27,79 @@ ul {
   margin: 0;
 }
 a {
-  display: inline;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+button {
+  background-color: var(--color-2) !important;
+}
+.ha {
+  height: auto;
 }
 /* menu */
+.logo a {
+  display: inline;
+}
 .navbar-wrap {
   background: black !important;
 }
 .menu-transparent .navbar.top-nav-collapse {
     background: #fff !important;
+}
+/* menu socios */
+#hero-menu, #hero-menu-grid {
+  padding: 0;
+  margin: 0;
+}
+.hero-menu-item {
+  background-color: var(--color-1);
+  height: 180px;
+  padding: 0;
+}
+.hero-menu-item:hover {
+  /* background-color: var(--color-2); */
+}
+.hero-menu-item a {
+  color: var(--color-white);
+  font-size: 2em;
+  padding: 0;
+}
+.hero-menu-item a:hover {
+  color: var(--color-1);
+}
+.hero-menu-item-txt {
+  padding-top: 38px;
+}
+/* home about */
+#home-about {
+  padding-top: 0 !important;
+}
+/* home news */
+#news-section {
+  background-color: var(--color-2) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+#news-section .vc_grid-item-mini {
+  padding: 8px !important;
+  border-radius: var(--border-radius);
+}
+.vc_row.wpb_row.vc_row-fluid.news-section .promo-block {
+  color: var(--color-white);
+}
+/* home events */
+#home-events {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background-color: var(--color-3) !important;
+}
+#home-eventos-grid {
+
+}
+#home-eventos-grid.vc_row.vc_column-gap-20 {
+    margin-left: 0;
+    margin-right: 0;
 }
 /* banners */
 #banner-grid {
@@ -37,4 +107,9 @@ a {
 }
 .banner {
   height: 180px;
+}
+/* footer */
+.footer-copyright {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }

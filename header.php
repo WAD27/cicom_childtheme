@@ -57,7 +57,7 @@
 
                           <?php };};?>
 
-                          <?php universal_breadcrumbs(); ?>
+                          <?php //universal_breadcrumbs(); ?>
                         </div>
                         <?php
                         global $post;
@@ -83,7 +83,7 @@
                   <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <h1 class="tag_line_title">
-                        <?php printf( wp_kses( __('Search Results: <span class="colored">%s</span>', 'universal-wp'), $allowed_html_array ), get_search_query() ); ?>
+                        <?php printf( wp_kses( __('Resultados de la busqueda: <span class="colored">%s</span>', 'universal-wp'), $allowed_html_array ), get_search_query() ); ?>
                       </h1>
                     </div>
                   </div>
@@ -106,7 +106,7 @@
                     <div class="row">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <h1 class="tag_line_title"><?php woocommerce_page_title() ?></h1>
-                        <div class="breadcrumbs"><?php woocommerce_breadcrumb() ?></div>
+                        <!-- <div class="breadcrumbs"><?php //woocommerce_breadcrumb() ?></div> -->
                       </div>
                     </div>
                   </div>

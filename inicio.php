@@ -40,8 +40,8 @@ get_header();
             $links = array('#','#','#','#');
             for ($i=0; $i < 4; $i++):
               ?>
-              <li class="hero-menu-item col-12 col-sm-6 col-md-3 text-center" style="background-color: var(<?php echo$colores[$i]?>);">
-                <a class="col-12" href="<?php echo $links[$i]; ?>" target="_blank">
+              <li class="hero-menu-item col-12 col-sm-6 col-md-3 text-center">
+                <a class="col-12" href="<?php echo $links[$i]; ?>" target="_blank" style="background-color: var(<?php echo$colores[$i]?>);">
                   <div class="hero-menu-item-txt col-12 ha">
                     <div class="col-12">
                       <i class="fa fa-<?php echo $iconos[$i];?>"></i>

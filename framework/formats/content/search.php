@@ -11,7 +11,7 @@
 				 while ( have_posts() ) :
 					the_post();
 					get_template_part( 'framework/formats/format', get_post_format() );
-			?>
+			?>No
 			<?php endwhile; ?>
 
 				</div>
@@ -19,11 +19,11 @@
 
 			<article id="post-0" class="post no-results not-found">
 				<header class="archive-header">
-					<h3 class="archive-title archive-search"><?php esc_html_e( 'Nothing Found', 'universal-wp' ); ?></h3>
+					<h3 class="archive-title archive-search"><?php esc_html_e( 'No se encontró nada', 'universal-wp' ); ?></h3>
 				</header>
 
 				<div class="search-content">
-					<p><?php esc_html_e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'universal-wp' ); ?></p>
+					<p><?php esc_html_e( 'No encontramos lo que buscabas. Intenta de nuevo con palabras clave.', 'universal-wp' ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 			</article>

@@ -35,22 +35,22 @@
                     </div>
                   </div>
               </div>
-            <ul class="cart_search_block">
+            <!-- <ul class="cart_search_block">
               <li class="menu-divider visible-lg">&nbsp;</li>
-              <?php if (class_exists( 'WooCommerce' )) {?>
+              <?php //if (class_exists( 'WooCommerce' )) {?>
                 <li>
                   <div class="universal_woo_cart">
                     <div class="universal_head_holder_inner">
                       <div class="universal_head_cart">
-                          <a class="" href="<?php echo WC()->cart->get_cart_url(); ?>"><i class="fa fa-shopping-bag fa-lg"></i> <span class="universal_cart_icon"><?php echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count, 'universal-wp' ), WC()->cart->cart_contents_count ); ?></span></a>
+                          <a class="" href="<?php //echo WC()->cart->get_cart_url(); ?>"><i class="fa fa-shopping-bag fa-lg"></i> <span class="universal_cart_icon"><?php //echo sprintf (_n( '%d', '%d', WC()->cart->cart_contents_count, 'universal-wp' ), WC()->cart->cart_contents_count ); ?></span></a>
                       </div>
                     </div>
                     <div class="universal_cart_widget">
-                      <?php the_widget( 'WC_Widget_Cart', 'title=' );?>
+                      <?php //the_widget( 'WC_Widget_Cart', 'title=' );?>
                     </div>
                   </div>
                 </li>
-                <?php } ?>
+                <?php //} ?>
                 <li>
                   <div class="search-icon-header">
                     <a href="#"><i class="fa fa-search fa-lg"></i></a>
@@ -58,8 +58,8 @@
                       <div class="black-search-table">
                         <div class="black-search-table-cell">
                           <div>
-                            <form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>" >
-                              <input type="text" class="focus-input" placeholder="Enter Keyword" value="<?php echo get_search_query() ?>" name="s" id="s" />
+                            <form role="search" method="get" id="searchform" action="<?php //echo esc_url(home_url('/')); ?>" >
+                              <input type="text" class="focus-input" placeholder="Enter Keyword" value="<?php //echo get_search_query() ?>" name="s" id="s" />
                               <input type="submit" id="searchsubmit" value="" />
                             </form>
                           </div>
@@ -69,7 +69,7 @@
                     </div>
                   </div>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <?php } else { ?>
             <div class="menu-center">

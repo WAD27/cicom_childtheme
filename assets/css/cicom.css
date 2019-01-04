@@ -39,6 +39,9 @@ button {
 .ha {
   height: auto;
 }
+.main-content {
+  padding-top: 33px;
+}
 /* menu */
 .logo a {
   display: inline;
@@ -60,6 +63,7 @@ button {
   padding-right: 0 !important;
 }
 .hero-menu-item a {
+  border-radius: 0px !important;
   color: var(--color-white);
   font-size: 2em;
   padding: 0;
@@ -67,7 +71,7 @@ button {
 .hero-menu-item a:hover,
 .hero-menu-item a:focus {
   background-color: var(--color-2) !important;
-  color: var(--color-1);
+  color: var(--color-clear);
 }
 .hero-menu-item-txt {
   padding-top: 38px;
@@ -78,22 +82,52 @@ button {
 }
 /* home news */
 #news-section {
-  background-color: var(--color-2) !important;
+  background-color: var(--color-1) !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-#news-section .vc_grid-item-mini {
-  padding: 8px !important;
-  border-radius: var(--border-radius);
+#news-section .vc_gitem-is-link {
+  height: 280px;
+}
+.vc_btn3-container a.vc_gitem-link {
+  color: var(--color-dark) !important;
+  background-color: var(--color-gray-1) !important;
+  border: 0;
+}
+.vc_btn3-container a.vc_gitem-link:hover,
+.vc_btn3-container a.vc_gitem-link:focus {
+  color: var(--color-clear) !important;
+  background-color: var(--color-1) !important;
+  border: 0;
+}
+.hi-icon-effect .hi-icon {
+    color: var(--color-2) !important;
+  }
+#news-section .vc_grid-item-mini,
+#home-events .vc_grid-item-mini {
+  background-color: var(--color-clear);
+  border-radius: var(--border-radius) !important;
+  box-shadow: 2px 2px 4px var(--color-dark);
+  padding: 16px !important;
+  color: var(--color-dark);
 }
 .vc_row.wpb_row.vc_row-fluid.news-section .promo-block {
   color: var(--color-white);
 }
+
+/* blog */
+article.post-set {
+  background-color: var(--color-clear);
+  border-radius: var(--border-radius) !important;
+  box-shadow: 2px 2px 4px var(--color-dark);
+  padding: 16px !important;
+}
 /* home events */
 #home-events {
+  color: var(--color-clear);
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  background-color: var(--color-3) !important;
+  background-color: var(--color-gray-3) !important;
 }
 #home-eventos-grid {
 
@@ -101,6 +135,15 @@ button {
 #home-eventos-grid.vc_row.vc_column-gap-20 {
     margin-left: 0;
     margin-right: 0;
+}
+/* social */
+.vc_icon_element-link {
+  box-shadow: 2px 2px 2px #cacaca
+}
+#face-feed {
+  /* overflow-y: scroll; */
+  max-height: 100%;
+  /* min-height: 500px; */
 }
 /* banners */
 #banner-grid {
@@ -114,3 +157,4 @@ button {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
 }
+/* responsivos */

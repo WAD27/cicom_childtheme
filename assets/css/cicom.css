@@ -153,6 +153,12 @@ article.post-set {
   height: 180px;
 }
 /* footer */
+.footer-widget {
+  text-align: center;
+}
+.footer-area-cont {
+  min-height: auto;
+}
 .footer-copyright {
     padding-top: 0px !important;
     padding-bottom: 0px !important;

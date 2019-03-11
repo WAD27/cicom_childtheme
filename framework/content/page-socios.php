@@ -18,7 +18,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		if (have_posts()): the_post();
+		// if (have_posts()): the_post();
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -38,12 +38,13 @@ $anun = 102;
 
 			<?php
 		endwhile;
-	else:
+		wp_reset_postdata();
+	// else:
 		?>
-		<div class="col-12">
-			<h3 class="text-center"><?php esc_html_e( 'No existen Asociaciones afiliadas a CICOM' );?></h3>
-		</div>
-	<?php endif; ?>
+		<!-- <div class="col-12">
+			<h3 class="text-center"><?php //esc_html_e( 'No existen Asociaciones afiliadas a CICOM' );?></h3>
+		</div> -->
+	<?php //endif; ?>
 </div>
 </div>
 <!--  -->
@@ -61,14 +62,14 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		if (have_posts()):the_post();
+		// if (have_posts()):the_post();
 		?>
 		<ul class="col-12 socios-list">
 			<?php
+			while ($q->have_posts()): $q->the_post();
 			$titulo = get_the_title();
 			$pic = get_the_post_thumbnail_url();
 			$link = get_the_permalink();
-			while ($q->have_posts()): $q->the_post();
 			?>
 			<li class="socios-item col-12 col-sm-6 col-md-4 col-lg-3">
 				<a href="<?php echo $link;?>">
@@ -81,12 +82,13 @@ $anun = 102;
 
 			<?php
 		endwhile;
-	else:
+		wp_reset_postdata();
+	// else:
 		?>
-		<div class="col-12">
-			<h3 class="text-center"><?php esc_html_e( 'No existen Academias afiliadas a CICOM' );?></h3>
-		</div>
-	<?php endif; ?>
+		<!-- <div class="col-12">
+			<h3 class="text-center"><?php //esc_html_e( 'No existen Academias afiliadas a CICOM' );?></h3>
+		</div> -->
+	<?php //endif; ?>
 </div>
 </div>
 <!--  -->
@@ -104,7 +106,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		if (have_posts()):the_post();
+		// if (have_posts()):the_post();
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -124,12 +126,13 @@ $anun = 102;
 
 			<?php
 		endwhile;
-	else:
+		wp_reset_postdata();
+	// else:
 		?>
-		<div class="col-12">
-			<h3 class="text-center"><?php esc_html_e( 'No existen Medios afiliadas a CICOM' );?></h3>
-		</div>
-	<?php endif; ?>
+		<!-- <div class="col-12">
+			<h3 class="text-center"><?php //esc_html_e( 'No existen Medios afiliadas a CICOM' );?></h3>
+		</div> -->
+	<?php //endif; ?>
 </div>
 </div>
 <!--  -->
@@ -147,7 +150,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		if (have_posts()):the_post();
+		// if (have_posts()):the_post();
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -167,12 +170,13 @@ $anun = 102;
 
 			<?php
 		endwhile;
-	else:
+		wp_reset_postdata();
+	// else:
 		?>
-		<div class="col-12">
-			<h3 class="text-center"><?php esc_html_e( 'No existen Anunciantes afiliadas a CICOM' );?></h3>
-		</div>
-	<?php endif; ?>
+		<!-- <div class="col-12">
+			<h3 class="text-center"><?php //esc_html_e( 'No existen Anunciantes afiliadas a CICOM' );?></h3>
+		</div> -->
+	<?php //endif; ?>
 </div>
 </div>
 <!--  -->

@@ -59,7 +59,7 @@
                         <div class="black-search-table-cell">
                           <div>
                             <form role="search" method="get" id="searchform" action="<?php //echo esc_url(home_url('/')); ?>" >
-                              <input type="text" class="focus-input" placeholder="Enter Keyword" value="<?php //echo get_search_query() ?>" name="s" id="s" />
+                              <input type="text" class="focus-input" placeholder="Busca nuestros archivos" value="<?php //echo get_search_query() ?>" name="s" id="s" />
                               <input type="submit" id="searchsubmit" value="" />
                             </form>
                           </div>

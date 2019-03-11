@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 
   img_liquid()
 
-  console.log("CICOM OK.");
+  console.log("CICOM scripts OK.");
 
 });
 

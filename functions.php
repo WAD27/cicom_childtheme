@@ -41,7 +41,7 @@ function cicom_banners_top() {
     'show_in_menu'        => true,
     'show_in_nav_menus'   => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 4,
+    'menu_position'       => 5,
     'can_export'          => true,
     'has_archive'         => true,
     'exclude_from_search' => false,
@@ -84,7 +84,7 @@ function cicom_banners_bottom() {
     'show_in_menu'        => true,
     'show_in_nav_menus'   => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 5,
+    'menu_position'       => 6,
     'can_export'          => true,
     'has_archive'         => true,
     'exclude_from_search' => false,
@@ -101,7 +101,7 @@ function socios_landing_page() {
   $labels = array(
     'name'                => _x( 'Socios CICOM', 'Post Type General Name', 'cicom-theme' ),
     'singular_name'       => _x( 'Socio CICOM', 'Post Type Singular Name', 'cicom-theme' ),
-    'menu_name'           => __( 'Socios CICOM Landing Page', 'cicom-theme' ),
+    'menu_name'           => __( 'Socios CICOM', 'cicom-theme' ),
     'parent_item_colon'   => __( 'Socio padre', 'cicom-theme' ),
     'all_items'           => __( 'Todos los Socios', 'cicom-theme' ),
     'view_item'           => __( 'Ver Socio', 'cicom-theme' ),
@@ -116,7 +116,7 @@ function socios_landing_page() {
 
   // Set other options for Custom Post Type
   $args = array(
-    'label'               => __( 'CICOM Socios Landing Page', 'cicom-theme' ),
+    'label'               => __( 'CICOM Socios', 'cicom-theme' ),
     'description'         => __( 'Landing Page para Socios CICOM', 'cicom-theme' ),
     'labels'              => $labels,
     'supports'            => array('title', 'thumbnail', 'custom-fields'),
@@ -127,7 +127,7 @@ function socios_landing_page() {
     'show_in_menu'        => true,
     'show_in_nav_menus'   => true,
     'show_in_admin_bar'   => true,
-    'menu_position'       => 6,
+    'menu_position'       => 4,
     'can_export'          => true,
     'has_archive'         => true,
     'exclude_from_search' => false,
@@ -136,9 +136,24 @@ function socios_landing_page() {
     'taxonomies'          => ''
   );
   // Registra
-  register_post_type( 'socios-landing-page', $args );
+  register_post_type( 'socios-cicom', $args );
 }
 // inicia CPTs
+add_action( 'init', 'socios_landing_page', 0 );
 add_action( 'init', 'cicom_banners_top', 0 );
 add_action( 'init', 'cicom_banners_bottom', 0 );
-add_action( 'init', 'socios_landing_page', 0 );
+// cpt a categorias
+add_action( 'init', 'add_category_taxonomy_to_cpt' );
+function add_category_taxonomy_to_cpt() {
+  register_taxonomy_for_object_type( 'category', 'socios-cicom' );
+  register_taxonomy_for_object_type( 'category', 'cicom-banners-bottom' );
+}
+
+// analytics
+add_action('wp_head', 'add_analytics');
+function add_analytics() { ?>
+  <!-- <script>
+
+  </script> -->
+  <?php
+}

@@ -180,6 +180,40 @@ article.post-set {
   width: auto;
 }
 /* socios */
+#socios {
+  padding-top: 0;
+}
+#socios-asoc {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color:var(--color-gray-1);
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+#socios-acad {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color:var(--color-gray-2);
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+#socios-medios {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--color-white);
+  background-color:var(--color-gray-1);
+  margin-bottom: 0;
+}
+#socios-anun {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--color-white);
+  background-color:var(--color-gray-2);
+  margin-bottom: 0;
+}
+.socios-cat {
+  margin-bottom: 32px;
+}
 .socios-item a {
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -187,7 +221,7 @@ article.post-set {
   padding: 16px;
 }
 .socios-item a:hover {
-  box-shadow: 1px 1px 5px lightgray;
+  box-shadow: 2px 2px 5px lightgray;
 }
 .socios-item-logo {
   height: 180px;

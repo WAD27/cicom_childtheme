@@ -1,16 +1,28 @@
 <?php
-$asoc = 99;
-$acad = 101;
-$medios = 100;
-$anun = 102;
-$_cat = is_category($asoc);
-var_dump($_cat);
-if (is_category($asoc)):
-
+// delcara ID de la pagina
+$asoc = 2304;
+$acad = 2308;
+$medios = 2310;
+$anun = 2306;
+$_cat;
+$color;
+// asocia con su categoria
+if (is_page($asoc)):
+	$_cat = 99;
+	$color = 'asoc';
+	elseif (is_page($acad)):
+	$_cat = 101;
+	$color = 'acad';
+	elseif (is_page($medios)):
+	$_cat = 100;
+	$color = 'medios';
+	elseif (is_page($anun)):
+	$_cat = 102;
+	$color = 'anun';
 endif;
 ?>
 <!-- Asociaciones -->
-<div id="socios-asoc" class="socios-cat row wrap-content">
+<div id="socios-<?php echo $color;?>" class="socios-cat row wrap-content">
 	<div class="container">
 		<div class="col-12">
 			<h1><?php echo get_cat_name($_cat);?></h1>

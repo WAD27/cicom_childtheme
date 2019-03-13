@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Socios Asociaciones
+Template Name: Socios Anunciantes
 */
 
 get_header();

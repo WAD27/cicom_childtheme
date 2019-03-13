@@ -243,6 +243,9 @@ article .cat-card a {
 .socios-cat {
   margin-bottom: 32px;
 }
+#socios-cat {
+  padding-top: 0;
+}
 .socios-item a {
   background-color: var(--color-white);
   border: 1px solid lightgray;

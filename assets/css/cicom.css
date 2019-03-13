@@ -41,7 +41,7 @@ button {
   padding-top: 0;
 }
 .ha {
-  height: auto;
+  height: auto !important;
 }
 .main-content {
   /* padding-top: 33px; */
@@ -79,6 +79,11 @@ button {
 }
 .hero-menu-item-txt {
   padding-top: 38px;
+}
+.intro h1 {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 60px;
 }
 /* home about */
 #home-about {
@@ -128,10 +133,31 @@ button {
 
 /* blog */
 article.post-set {
-  background-color: var(--color-clear);
+  background-color: transparent;
+  border-radius: var(--border-radius) !important;
+  padding: 16px !important;
+}
+article .cat-card {
+  /* background-color: var(--color-1); */
+  color: var(--color-white);
   border-radius: var(--border-radius) !important;
   box-shadow: 2px 2px 4px var(--color-dark);
   padding: 16px !important;
+}
+article .cat-card:hover {
+  box-shadow: 2px 3px 5px var(--color-black);
+}
+article .cat-card a {
+  color: var(--color-white);
+}
+.card-article {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.card-article .title {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  font-weight: bolder;
 }
 /* home events */
 #home-events {
@@ -188,28 +214,28 @@ article.post-set {
 }
 #socios-asoc {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
   background-color:var(--color-2);
   color: var(--color-white);
   margin-bottom: 0;
 }
 #socios-acad {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
   background-color:var(--color-1);
   color: var(--color-white);
   margin-bottom: 0;
 }
 #socios-medios {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
   color: var(--color-white);
   background-color:var(--color-4);
   margin-bottom: 0;
 }
 #socios-anun {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
   color: var(--color-white);
   background-color:var(--color-gray-4);
   margin-bottom: 0;

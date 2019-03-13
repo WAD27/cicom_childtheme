@@ -8,7 +8,11 @@
   wp_enqueue_script('custom-script',get_stylesheet_directory_uri() . '/assets/js/cicom.js', array( 'jquery' ));
 }
 add_action( 'wp_enqueue_scripts', 'cicom_scripts' );
-
+//
+function custom_excerpt( $length ) {
+	return 32;
+}
+add_filter( 'excerpt_length', 'custom_excerpt', 999 );
 // Custom posts
 function cicom_banners_top() {
   // etiquetas backend

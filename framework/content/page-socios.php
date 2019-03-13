@@ -18,7 +18,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		// if (have_posts()): the_post();
+		if ($q->have_posts()):
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -39,12 +39,12 @@ $anun = 102;
 			<?php
 		endwhile;
 		wp_reset_postdata();
-	// else:
+	else:
 		?>
-		<!-- <div class="col-12">
-			<h3 class="text-center"><?php //esc_html_e( 'No existen Asociaciones afiliadas a CICOM' );?></h3>
-		</div> -->
-	<?php //endif; ?>
+		<div class="col-12">
+			<h3 class="text-center"><?php esc_html_e( 'No existen Asociaciones afiliadas a CICOM' );?></h3>
+		</div>
+	<?php endif; ?>
 </div>
 </div>
 <!--  -->
@@ -62,7 +62,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		// if (have_posts()):the_post();
+		if ($q->have_posts()):
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -83,12 +83,12 @@ $anun = 102;
 			<?php
 		endwhile;
 		wp_reset_postdata();
-	// else:
+	else:
 		?>
-		<!-- <div class="col-12">
-			<h3 class="text-center"><?php //esc_html_e( 'No existen Academias afiliadas a CICOM' );?></h3>
-		</div> -->
-	<?php //endif; ?>
+		<div class="col-12">
+			<h3 class="text-center"><?php esc_html_e( 'No existen Academias afiliadas a CICOM' );?></h3>
+		</div>
+	<?php endif; ?>
 </div>
 </div>
 <!--  -->
@@ -106,7 +106,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		// if (have_posts()):the_post();
+		if ($q->have_posts()):
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -127,12 +127,12 @@ $anun = 102;
 			<?php
 		endwhile;
 		wp_reset_postdata();
-	// else:
+	else:
 		?>
-		<!-- <div class="col-12">
-			<h3 class="text-center"><?php //esc_html_e( 'No existen Medios afiliadas a CICOM' );?></h3>
-		</div> -->
-	<?php //endif; ?>
+		<div class="col-12">
+			<h3 class="text-center"><?php esc_html_e( 'No existen Medios afiliadas a CICOM' );?></h3>
+		</div>
+	<?php endif; ?>
 </div>
 </div>
 <!--  -->
@@ -150,7 +150,7 @@ $anun = 102;
 			'post-per-page' => -1
 		);
 		$q = new WP_Query($socio);
-		// if (have_posts()):the_post();
+		if ($q->have_posts()):
 		?>
 		<ul class="col-12 socios-list">
 			<?php
@@ -171,12 +171,12 @@ $anun = 102;
 			<?php
 		endwhile;
 		wp_reset_postdata();
-	// else:
+	else:
 		?>
-		<!-- <div class="col-12">
-			<h3 class="text-center"><?php //esc_html_e( 'No existen Anunciantes afiliadas a CICOM' );?></h3>
-		</div> -->
-	<?php //endif; ?>
+		<div class="col-12">
+			<h3 class="text-center"><?php esc_html_e( 'No existen Anunciantes afiliadas a CICOM' );?></h3>
+		</div>
+	<?php endif; ?>
 </div>
 </div>
 <!--  -->

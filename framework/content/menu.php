@@ -36,7 +36,7 @@
                   </div>
               </div>
             <ul class="cart_search_block">
-              <li class="menu-divider visible-lg">&nbsp;</li>
+              <!-- <li class="menu-divider visible-lg">&nbsp;</li> -->
               <?php if (class_exists( 'WooCommerce' )) {?>
                 <li>
                   <div class="universal_woo_cart">
@@ -51,15 +51,16 @@
                   </div>
                 </li>
                 <?php } ?>
-                <li>
+                <!-- search -->
+                <!-- <li>
                   <div class="search-icon-header">
                     <a href="#"><i class="fa fa-search fa-lg"></i></a>
                     <div class="black-search-block">
                       <div class="black-search-table">
                         <div class="black-search-table-cell">
                           <div>
-                            <form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>" >
-                              <input type="text" class="focus-input" placeholder="Busca nuestros archivos" value="<?php echo get_search_query() ?>" name="s" id="s" />
+                            <form role="search" method="get" id="searchform" action="<?php //echo esc_url(home_url('/')); ?>" >
+                              <input type="text" class="focus-input" placeholder="Busca nuestros archivos" value="<?php //echo get_search_query() ?>" name="s" id="s" />
                               <input type="submit" id="searchsubmit" value="" />
                             </form>
                           </div>
@@ -68,7 +69,8 @@
                       <div class="close-black-block"><a href="#"><i class="ion-ios-close-empty"></i></a></div>
                     </div>
                   </div>
-              </li>
+              </li> -->
+              <!--  -->
             </ul>
           </div>
           <?php } else { ?>

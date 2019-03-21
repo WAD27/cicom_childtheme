@@ -1,8 +1,8 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php $post = get_post($id); $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'wall-portfolio-squre'); ?> 
-    <?php if ( has_post_thumbnail()) { ?> 
+		<?php $post = get_post($id); $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'wall-portfolio-squre'); ?>
+    <?php if ( has_post_thumbnail()) { ?>
         <div class="tag_line tag_line_image single" data-background="<?php echo esc_url($image[0]); ?>">
-    <?php } else{ ?> 
+    <?php } else{ ?>
 	    <div class="tag_line tag_line_image single" data-background="<?php echo get_template_directory_uri() . '/assets/images/10.jpg' ?>">
 	<?php };?>
 		    <div class="tag-body">
@@ -26,7 +26,7 @@
                  <div class="container margin">
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col col-sm-12 col-xs-12 sidebar-left">
-							<div class="wrap-content">   
+							<div class="wrap-content">
 							 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<article id="post" class="single">
 									<div class="entry-content">
@@ -34,7 +34,7 @@
 									</div>
 									<div class="post-commetns">
 										<?php comments_template(); ?>
-									</div>	
+									</div>
 
 							<?php endwhile; else: ?>
 									<div id="posts" class="single-post blog-page">
@@ -44,18 +44,18 @@
 											</article>
 										</section>
 									</div>
-									<?php endif; ?>				
+									<?php endif; ?>
 								</article>
 							</div>
 		                </div>
 		                <?php get_sidebar(); ?>
-                    </div>                
+                    </div>
                 </div>
             <?php elseif ($layout_value == 'sidebar-right'): ?>
                  <div class="container margin">
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col col-sm-12 col-xs-12 sidebar-right">
-							<div class="wrap-content">   
+							<div class="wrap-content">
 							 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								<article id="post" class="single">
 									<div class="entry-content">
@@ -72,16 +72,16 @@
 											</article>
 										</section>
 									</div>
-									<?php endif; ?>				
+									<?php endif; ?>
 								</article>
 							</div>
 		                </div>
 		                <?php get_sidebar(); ?>
-                    </div>                
+                    </div>
                 </div>
                 <?php else: ?>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-sidebar margin">
-					<div class="wrap-content">    
+					<div class="wrap-content">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<article id="post" class="single">
 							<div class="entry-content">
@@ -89,7 +89,7 @@
 							</div>
 							<div class="post-commetns">
 								<?php comments_template(); ?>
-							</div>	
+							</div>
 						<?php endwhile; else: ?>
 							<div id="posts" class="single-post blog-page">
 								<section>
@@ -98,7 +98,7 @@
 									</article>
 								</section>
 							</div>
-							<?php endif; ?>				
+							<?php endif; ?>
 						</article>
 					</div>
 				</div>

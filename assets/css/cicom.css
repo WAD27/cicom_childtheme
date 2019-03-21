@@ -57,9 +57,18 @@ button {
   background: #fff !important;
 }
 /* menu socios */
-#hero-menu, #hero-menu-grid {
+.intro-body::before {
+    background: rgba(7, 9, 21, 0.1);
+}
+#hero-menu-grid {
   padding: 0;
   margin: 0;
+}
+#hero-menu {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-4);
+  color: var(--color-white);
 }
 .hero-menu-item {
   height: 180px;
@@ -81,10 +90,13 @@ button {
   padding-top: 38px;
 }
 .intro h1 {
-    font-size: 32px;
-    font-weight: 200;
-    line-height: 60px;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 60px;
 }
+.intro .intro-body {
+  padding: 180px 0 30px;
+  }
 /* home about */
 #home-about {
   padding-top: 0 !important;
@@ -240,8 +252,23 @@ article .cat-card a {
   background-color:var(--color-gray-4);
   margin-bottom: 0;
 }
+.socios-asoc {
+  background-color:var(--color-2) !important;
+}
+.socios-acad {
+  background-color:var(--color-1) !important;
+}
+.socios-medios {
+  background-color:var(--color-4) !important;
+}
+.socios-anun {
+  background-color:var(--color-gray-4) !important;
+}
 .socios-cat {
   margin-bottom: 32px;
+}
+.tag_line_image.single .tag-body::before {
+    background: transparent !important;
 }
 #socios-cat {
   padding-top: 0;

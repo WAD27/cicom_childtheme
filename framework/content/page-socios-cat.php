@@ -25,7 +25,7 @@ endif;
 <div id="socios-<?php echo $color;?>" class="socios-cat row wrap-content">
 	<div class="container">
 		<div class="col-12">
-			<h1><?php echo get_cat_name($_cat);?></h1>
+			<h1>Nuestros socios en:  <?php echo get_cat_name($_cat);?></h1>
 			<p><?php echo category_description($_cat);?></p>
 		</div>
 		<?php

@@ -1,6 +1,6 @@
 <div id="banners" class="container-fluid">
 <br>
-  <h1 class="col-12 text-center">Banners CICOM</h1>
+  <!-- <h1 class="col-12 text-center">Banners CICOM</h1> -->
 
   <ul id="banner-grid" class="row">
     <!-- banners -->

@@ -37,11 +37,11 @@ get_header();
             $socios = array('Asociaciónes','Medios','Academia','Anunciantes');
             $iconos = array('users','play','graduation-cap','microphone');
             $colores = array('--color-gray-1','--color-gray-2','--color-gray-3','--color-gray-4');
-            $links = array('#','#','#','#');
+            $links = array(get_page_link(2304),get_page_link(2310),get_page_link(2308),get_page_link(2306));
             for ($i=0; $i < 4; $i++):
               ?>
               <li class="hero-menu-item col-12 col-sm-6 col-md-3 text-center">
-                <a class="col-12" href="<?php echo $links[$i]; ?>" target="_blank" style="background-color: var(<?php echo$colores[$i]?>);">
+                <a class="col-12" href="<?php echo $links[$i]; ?>" target="_blank" style="background-color: var(<?php echo $colores[$i]?>);">
                   <div class="hero-menu-item-txt col-12 ha">
                     <div class="col-12">
                       <i class="fa fa-<?php echo $iconos[$i];?>"></i>
@@ -61,7 +61,7 @@ get_header();
 
       </div>
       <br>
-      <hr>
+      <!-- <hr> -->
       <!-- fin custom -->
 
       <div class="col-lg-12 col-md-12 col-sm-12 no-sidebar">

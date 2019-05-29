@@ -25,7 +25,7 @@ endif;
 <div id="socios-<?php echo $color;?>" class="socios-cat row wrap-content">
 	<div class="container">
 		<div class="col-12">
-			<h1>Nuestros socios en:  <?php echo get_cat_name($_cat);?></h1>
+			<h2>Nuestros socios en:  <?php echo get_cat_name($_cat);?></h2>
 			<p><?php echo category_description($_cat);?></p>
 		</div>
 		<?php
@@ -49,7 +49,7 @@ endif;
 						<div class="socios-item-logo col-12 imgLiquid imgLiquidNoFill">
 							<img src="<?php echo $pic;?>" alt="Logo socio CICOM">
 						</div>
-						<h4><?php echo $titulo;?></h4>
+						<h5 class="text-center"><?php echo $titulo;?></h5>
 					</a>
 				</li>
 

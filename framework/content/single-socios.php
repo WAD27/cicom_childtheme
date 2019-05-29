@@ -11,7 +11,7 @@ if ($cat[0]->cat_name == 'Asociaciones'):
         $color = 'anun';
       endif;
       ?>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ): the_post(); ?>
         <?php $post = get_post($id); ?>
 
         <div class="socios-<?php echo $color;?> tag_line tag_line_image single">
@@ -31,105 +31,47 @@ if ($cat[0]->cat_name == 'Asociaciones'):
           </div>
         </div>
       </div>
-    <?php endwhile; endif; ?>
-    <?php $layout_value = get_theme_mod( 'universal_single_sidebars', 'sidebar-right' ); ?>
-    <div class="content">
-      <div class="container">
+      <!--  -->
+      <div id="single-asociado" class="container">
         <div class="row">
-          <?php if ($layout_value == 'sidebar-left'): ?>
-            <div class="container margin">
-              <div class="row">
-                <div class="col-lg-8 col-md-8 col col-sm-12 col-xs-12 sidebar-left">
-                  <div class="wrap-content">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                      <article id="post" class="single">
-                        <div class="entry-content">
-                          <?php get_template_part( 'framework/formats/format', get_post_format() ); ?>
-                        </div>
-                        <div class="post-commetns">
-                          <?php //comments_template(); ?>
-                        </div>
 
-                      <?php endwhile; else: ?>
-                        <div id="posts" class="single-post blog-page">
-                          <section>
-                            <article>
-                              <p><?php esc_html_e('No existen posts. ', 'universal-wp'); ?></p>
-                            </article>
-                          </section>
-                        </div>
-                      <?php endif; ?>
-                    </article>
-                  </div>
-                </div>
-                <?php get_sidebar(); ?>
-              </div>
-            </div>
-          <?php elseif ($layout_value == 'sidebar-right'): ?>
-            <div class="container margin">
-              <div class="row">
-                <div class="col-lg-8 col-md-8 col col-sm-12 col-xs-12 sidebar-right">
-                  <div class="wrap-content">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                      <article id="post" class="single">
-                        <div class="entry-content">
-                          <?php get_template_part( 'framework/formats/format', get_post_format() ); ?>
-                        </div>
-                        <div class="post-commetns">
-                          <?php comments_template(); ?>
-                        </div>
-                      <?php endwhile; else: ?>
-                        <div id="posts" class="single-post blog-page">
-                          <section>
-                            <article>
-                              <p><?php esc_html_e('Sorry, no posts. ', 'universal-wp'); ?></p>
-                            </article>
-                          </section>
-                        </div>
-                      <?php endif; ?>
-                    </article>
-                  </div>
-                </div>
-                <?php get_sidebar(); ?>
-              </div>
-            </div>
-          <?php else: ?>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-sidebar margin">
-              <div class="wrap-content">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                  <article id="post" class="single">
-                    <div class="entry-content">
-                      <?php get_template_part( 'framework/formats/format', get_post_format() ); ?>
-                    </div>
-                    <div class="post-commetns">
-                      <?php comments_template(); ?>
-                    </div>
-                  <?php endwhile; else: ?>
-                    <div id="posts" class="single-post blog-page">
-                      <section>
-                        <article>
-                          <p><?php esc_html_e('Sorry, no posts. ', 'universal-wp'); ?></p>
-                        </article>
-                      </section>
-                    </div>
-                  <?php endif; ?>
-                </article>
-              </div>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-      <div class="pagination-line">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="pager">
-                <li class="previous"> <?php previous_post_link( '%link', '<i class="fa fa-angle-left"></i> Anterior', TRUE ); ?> </li>
-                <!-- <li><a href="<?php echo get_theme_mod( 'universal_single_blog', 'http://themeforest.net/'); ?>"><i class="fa ion-grid fa-2x"></i></a></li> -->
-                <li class="next"> <?php next_post_link( '%link', 'Siguiente <i class="fa fa-angle-right"></i>', TRUE ); ?> </li>
-              </ul>
+          <div class="col-12 col-md-4">
+            <div class="imgLiquidImgLiquidNoFill">
+              <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
             </div>
           </div>
+          <div class="col-12 col-md-8">
+            <?php echo the_field('socio_informacion_general'); ?>
+          </div>
+
+        </div>
+        <!--  -->
+        <div id="single-asociado-links" class="col-12">
+          <div class="col-12 col-md-4">
+            <ul class="row">
+              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('facebook'); ?>"><i class="fa fa-facebook"></i></li>
+              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('twitter'); ?>"><i class="fa fa-twitter"></i></li>
+              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('linkedin'); ?>"><i class="fa fa-linkedin"></i></li>
+              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('instagram'); ?>"><i class="fa fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="col-12 col-8 text-center">
+            Visita nuestro sitio  <?php echo the_field('socio_link_a_sitio'); ?>
+          </div>
+        </div>
+        <!--  -->
+        <div class="row">
+          <div class="col-12 col-md-4">
+
+          </div>
+          <div class="col-12 col-md-8">
+            <div id="map" class="map">
+
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+      <?php
+      // endwhile;
+    endif; ?>

@@ -28,8 +28,6 @@ get_header();
         <?php endwhile;?>
         <!-- menu asociados -->
         <div id="hero-menu" class="container-fluid">
-          <br>
-          <h3 class="col-12 text-center">CICOM se integra por:</h3>
 
           <ul id="hero-menu-grid" class="row">
 

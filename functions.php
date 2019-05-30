@@ -9,10 +9,10 @@
 }
 add_action( 'wp_enqueue_scripts', 'cicom_scripts' );
 //
-function custom_excerpt( $length ) {
-	return 32;
+function custom_excerpt($length) {
+	return 24;
 }
-add_filter( 'excerpt_length', 'custom_excerpt', 999 );
+add_filter('excerpt_length','custom_excerpt',999);
 // Custom posts
 function cicom_asoc_menu() {
   // etiquetas backend
@@ -123,7 +123,7 @@ function socios_landing_page() {
     'label'               => __( 'CICOM Socios', 'cicom-theme' ),
     'description'         => __( 'Landing Page para Socios CICOM', 'cicom-theme' ),
     'labels'              => $labels,
-    'supports'            => array('title', 'thumbnail', 'custom-fields'),
+    'supports'            => array('title', 'excerpt','thumbnail', 'custom-fields'),
     'menu_icon'           => 'dashicons-admin-users',
     'hierarchical'        => false,
     'public'              => true,

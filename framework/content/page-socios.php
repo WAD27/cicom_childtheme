@@ -27,7 +27,7 @@ $anun = 102;
 				$pic = get_the_post_thumbnail_url();
 				$link = get_the_permalink();
 				?>
-				<li class="socios-item col-12 col-sm-6 col-md-4 col-lg-3">
+				<li class="socios-item col-xs-12 col-sm-6 col-md-4 col-lg-3">
 					<a href="<?php echo $link;?>">
 						<div class="socios-item-logo col-12 imgLiquid imgLiquidNoFill">
 							<img src="<?php echo $pic;?>" alt="Logo socio CICOM">

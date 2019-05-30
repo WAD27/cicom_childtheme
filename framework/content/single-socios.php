@@ -76,14 +76,14 @@ if ($cat[0]->cat_name == 'Asociaciones'):
             <div class="row">
               <div class="col-12 ha my-auto text-center">
                 <a class="col-12" href="<?php echo the_field('socio_link_a_sitio'); ?>" target="_blank">
-                  Visita nuestro sitio
+                  Visita nuestro sitio Web!
                 </a>
               </div>
             </div>
           </div>
         </div>
         <!--  -->
-        <div class="row text-right">
+        <div id="single-asociados-ubicacion" class="row text-right">
           <div class="single-direccion col-12 col-md-4">
             <div class="col-12">
               <a href="tel:<?php echo the_field('socio_info_telefono_1'); ?>" target="_blank">

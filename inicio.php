@@ -69,6 +69,12 @@ get_header();
 
         ?>
       </div>
+      <!--  -->
+      <div id="home-events" class="col-xs-12">
+
+        <?php get_template_part('framework/content/eventos'); ?>
+
+      </div>
     </div>
   </div>
 </section>

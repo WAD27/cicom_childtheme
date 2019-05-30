@@ -35,8 +35,8 @@ if ($cat[0]->cat_name == 'Asociaciones'):
       <div id="single-asociado" class="container">
         <div class="row">
 
-          <div class="col-12 col-md-4">
-            <div class="imgLiquidImgLiquidNoFill">
+          <div class="single-asociado-img col-12 col-md-4">
+            <div class="imgLiquid imgLiquidNoFill">
               <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
             </div>
           </div>
@@ -46,27 +46,67 @@ if ($cat[0]->cat_name == 'Asociaciones'):
 
         </div>
         <!--  -->
-        <div id="single-asociado-links" class="col-12">
-          <div class="col-12 col-md-4">
-            <ul class="row">
-              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('facebook'); ?>"><i class="fa fa-facebook"></i></li>
-              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('twitter'); ?>"><i class="fa fa-twitter"></i></li>
-              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('linkedin'); ?>"><i class="fa fa-linkedin"></i></li>
-              <li class="col-3 text-center my-auto"><a href="<?php echo the_field('instagram'); ?>"><i class="fa fa-instagram"></i></li>
+        <div id="single-asociado-links" class="col-12 ha">
+          <?php
+          $soc = array('facebook','twitter','linkedin','instagram');
+          ?>
+          <div class="col-12 col-md-4 no-padding">
+            <ul class="col-12 justify-content-center align-items-center">
+              <?php
+              for ($i=0; $i < count($soc); $i++):
+                $on = $soc[$i];
+                if ($on):
+                  ?>
+                  <li class="col-xs-6 col-md-4 text-center no-padding ha mx-auto">
+                    <a class="col-12 no-padding" href="<?php echo get_field($on); ?>" class="col-12 ha my-auto">
+                      <i class="fa fa-<?php echo $on; ?>"></i>
+                    </a>
+                  </li>
+                <?php else: ?>
+                  <li class="col-6 col-md-4 text-center no-padding ha mx-auto">
+                      No Hay Redes sociales!
+                  </li>
+                  <?php
+                endif;
+              endfor;
+              ?>
             </ul>
           </div>
-          <div class="col-12 col-8 text-center">
-            Visita nuestro sitio  <?php echo the_field('socio_link_a_sitio'); ?>
+          <div class="single-asociado-sitelink col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 ha my-auto text-center">
+                <a class="col-12" href="<?php echo the_field('socio_link_a_sitio'); ?>" target="_blank">
+                  Visita nuestro sitio
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <!--  -->
-        <div class="row">
-          <div class="col-12 col-md-4">
-
+        <div class="row text-right">
+          <div class="single-direccion col-12 col-md-4">
+            <div class="col-12">
+              <a href="tel:<?php echo the_field('socio_info_telefono_1'); ?>" target="_blank">
+                Tel: <?php echo the_field('socio_info_telefono_1'); ?>
+              </a>
+            </div>
+            <div class="col-12">
+              <a href="tel:<?php echo the_field('socio_info_telefono_2'); ?>" target="_blank">
+                Tel: <?php echo the_field('socio_info_telefono_2'); ?>
+              </a>
+            </div>
+            <div class="col-12">
+              <a href="mailto:<?php echo the_field('socio_info_email'); ?>" target="_blank">
+                Email: <?php echo the_field('socio_info_email'); ?>
+              </a>
+            </div>
+            <div class="col-12">
+              Dirección: <?php echo the_field('socio_info_direccion'); ?>
+            </div>
           </div>
           <div class="col-12 col-md-8">
             <div id="map" class="map">
-
+              <?php echo get_field('mapa_socio'); ?>
             </div>
           </div>
 

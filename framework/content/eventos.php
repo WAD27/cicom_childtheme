@@ -15,7 +15,9 @@
 
         <div class="col-xs-12 col-md-4 col-lg-5">
 
-          <h4 class="col-12 text-center"><?php echo the_title(); ?></h4>
+          <h4 class="col-12 text-center">
+            <?php echo the_title(); ?>
+          </h4>
           <div class="home-eventos-item-img col-12">
             <div class="col-12 imgLiquid imgLiquidFill">
               <img src="<?php echo get_the_post_thumbnail_url();?>"  alt="CICOM" />

@@ -256,6 +256,13 @@ article .cat-card a {
 .eventos-precio {
   color: green !important;
 }
+.evento-poster {
+  min-height: 450px;
+  margin-bottom: 32px;
+}
+.evento-poster img {
+  border-radius: var(--border-radius);
+}
 /* footer */
 .footer-widget {
   text-align: center;
@@ -316,6 +323,9 @@ article .cat-card a {
   margin-bottom: 0;
 }
 .socios-asoc {
+  background-color:var(--color-2) !important;
+}
+.eventos-header {
   background-color:var(--color-2) !important;
 }
 .socios-acad {
@@ -403,6 +413,9 @@ article .cat-card a {
 /* responsivos */@media screen and (max-width: 994px) {
 #single-asociado-links ul li a {
   padding: 32px 16px !important;
+}
+#single-asociado-links {
+  margin-bottom: 32px !important;
 }
 #single-asociados-ubicacion {
   text-align: center;

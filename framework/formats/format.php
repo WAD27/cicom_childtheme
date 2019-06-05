@@ -16,14 +16,13 @@ if ($layout_value == 'classic'):
     endif;
     //custom
     if (is_category(98)):
-      $cat_color = 'var(--color-1)';
+      $cat_color = 'var(--color-clear)';
+      $color = 'var(--color-dark)';
       elseif (is_category(97)):
-        $cat_color = 'var(--color-2)';
+        $cat_color = 'var(--color-gray-1)';
+        $color = 'var(--color-white)';
       endif;
       ?>
-      <?php //var_dump($cat_color); ?>
-
-
 
       <?php if(is_single()) { ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class("card-article");?> >
@@ -32,10 +31,10 @@ if ($layout_value == 'classic'):
           <?php } else  { ?>
             <?php if( has_post_thumbnail()) { ?>
               <article class="col-12 col-sm-6 col-md-4 col-lg-4 card-article" data-catslug-post="<?php echo implode(' ', $getAllCats) ?>" id="post-<?php the_ID();?>" <?php if($type_class != 'post-set') { echo post_class("post-set $type_class"); } ?>>
-                <div class="cat-card" style="background-color:<?php echo $cat_color; ?>;">
+                <div class="cat-card" style="background-color:<?php echo $cat_color; ?>;color:<?php echo $color; ?>">
                 <?php } else  { ?>
                   <article data-catslug-post="<?php echo implode(' ', $getAllCats) ?>" id="post-<?php the_ID();?>" <?php if($type_class != 'post-set') { echo post_class("post-set no-thumbnail $type_class"); } ?>>
-                    <div class="cat-card" style="background-color:<?php echo $cat_color; ?>;">
+                    <div class="cat-card" style="background-color:<?php echo $cat_color; ?>;color:<?php echo $color; ?>">
                     <?php } ?>
                   <?php } ?>
                   <?php
@@ -75,21 +74,25 @@ if ($layout_value == 'classic'):
                       <?php endif; ?>
                     </div>
                   <?php } else { ?>
-                    <div class="post-thumbnail">
-                      <div class="post-hover">
-                        <a href="<?php the_permalink(); ?>" style="height:<?php echo esc_attr($image_height) ?>;">
-                          <div class="imgLiquid imgLiquidFill">
-                            <img src="<?php echo $image_url; ?>" alt="CICOM blog">
+                    <div class="col-12">
+                      <div class="row">
+                        <?php
+                        //if (have_posts()): the_post();
+                         ?>
+                        <!-- <a href="<?php //the_permalink(); ?>" style="height:<?php //echo esc_attr($image_height) ?>;"> -->
+                          <div class="col-12 imgLiquid imgLiquidFill">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="CICOM blog">
                           </div>
-                        </a>
+                        <!-- </a> -->
+                      <?php// endif; ?>
                       </div>
                     </div>
                     <div class="content-block">
                       <h5 class="title">
-                        <a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo esc_html(get_the_title()); ?></a>
+                        <a style="color:<?php echo $color; ?>" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo esc_html(get_the_title()); ?></a>
                       </h5>
                       <?php echo get_the_excerpt(); ?>
-                      <a href="<?php the_permalink() ?>" class="btn btn-gray btn-xs"><?php esc_html_e('Leer más','universal-wp') ?></a>
+                      <a href="<?php the_permalink() ?>" class="btn btn-gray btn-xs" style="<?php echo $color; ?>"><?php esc_html_e('Leer más','universal-wp') ?></a>
                     </div>
 
                   <?php }; ?>

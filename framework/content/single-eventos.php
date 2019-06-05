@@ -103,6 +103,7 @@ if ( have_posts() ): the_post(); ?>
   </div>
   <div id="evento-ubicacion" class="row">
     <div class="col-xs-12 col-md-6">
+      <small>Poster:</small>
       <a class="col-12" href="<?php echo the_field('evento_poster'); ?>" target="_blank">
 
         <div class="evento-poster col-12 imgLiquid imgLiquidNoFill">
@@ -115,7 +116,7 @@ if ( have_posts() ): the_post(); ?>
 
     </div>
     <div class="col-xs-12 col-md-6">
-
+      <small>Mapa:</small>
       <?php echo the_field('evento_mapa'); ?>
 
     </div>

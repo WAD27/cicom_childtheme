@@ -219,8 +219,8 @@ article .cat-card a {
   border-radius: var(--border-radius);
 }
 .home-eventos-item-info {
-  padding-top: 8px;
-  margin-bottom: 8px;
+  padding-top: 16px;
+  margin-bottom: 0px;
 }
 .home-eventos-item-link {
   position: absolute;
@@ -410,12 +410,14 @@ article .cat-card a {
 .no-padding {
   padding: 0 !important;
 }
-/* responsivos */@media screen and (max-width: 994px) {
-#single-asociado-links ul li a {
-  padding: 32px 16px !important;
-}
 #single-asociado-links {
   margin-bottom: 32px !important;
+}
+.cff-likebox {display: none !important;}
+/* responsivos */
+@media screen and (max-width: 994px) {
+#single-asociado-links ul li a {
+  padding: 32px 16px !important;
 }
 #single-asociados-ubicacion {
   text-align: center;
